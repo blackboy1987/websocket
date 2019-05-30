@@ -26,7 +26,7 @@ ${id}
         console.log(data);
         stompClient.subscribe("/user/"+id+"/sendMessageByServer",function (response) {
             console.log(response.body);
-            $("#msg").html(response.body);
+            $("#msg").append(response.body+"<br/>");
         })
     })
 
